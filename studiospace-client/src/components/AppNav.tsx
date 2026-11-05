@@ -234,7 +234,6 @@ export default function AppNav() {
     >
       Dashboard
     </Link>
-
     <Link
       href="/profile"
       className={`profile-nav ${routeActive("/profile") ? "nav-active" : ""}`}
