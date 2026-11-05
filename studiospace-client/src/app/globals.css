@@ -90,7 +90,6 @@ body {
     background-color 0.25s ease,
     color 0.25s ease;
 }
-
 button,
 a,
 input,
@@ -383,6 +382,7 @@ button:disabled {
   margin: 0 auto;
   background: var(--surface);
 }
+
 
 @media (max-width: 640px) {
   .detail-image {
