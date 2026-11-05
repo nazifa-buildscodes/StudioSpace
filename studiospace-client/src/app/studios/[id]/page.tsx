@@ -11,6 +11,7 @@ function StudioDetailContent() {
   const { id } = useParams<{ id: string }>();
 
   const [s, setS] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
 const [date, setDate] = useState("");
 const [start, setStart] = useState("10:00");
 const [durationHours, setDurationHours] = useState(2);
@@ -42,11 +43,17 @@ const user = currentUser();
 const isOwnerHost = (studio: any) =>
   user?.role === "host" &&
   user.email?.toLowerCase() === studio?.hostEmail?.toLowerCase();
-  useEffect(() => {
+ useEffect(() => {
+  setLoading(true);
+
   fetch(`${API}/api/studios/${id}`)
-    .then((r) => r.json())
+    .then((r) => {
+      if (!r.ok) throw new Error("Studio not found");
+      return r.json();
+    })
     .then((d) => setS(d.data))
-    .catch(() => setS(null));
+    .catch(() => setS(null))
+    .finally(() => setLoading(false));
 
   fetch(`${API}/api/studios/${id}/reviews`)
     .then((r) => r.json())
@@ -211,11 +218,23 @@ async function contactHost() {
       title={s?.title || "Studio details"}
       subtitle={s?.location}
     >
-      {!s ? (
-        <div className="empty-state">
-          Loading studio details…
-        </div>
-      ) : (
+      {loading ? (
+  <div className="studio-skeleton">
+    <div className="skeleton-image" />
+
+    <div className="skeleton-content">
+      <div className="skeleton-line short" />
+      <div className="skeleton-line title" />
+      <div className="skeleton-line" />
+      <div className="skeleton-line" />
+      <div className="skeleton-line medium" />
+    </div>
+  </div>
+) : !s ? (
+  <div className="empty-state">
+    Studio not found.
+  </div>
+) : (
 <div
   className={`detail-layout ${
     isOwnerHost(s) ? "owner-detail-layout" : ""
