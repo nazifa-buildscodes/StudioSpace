@@ -129,8 +129,8 @@ app.patch("/api/auth/profile", auth, async (req: AuthRequest, res) => {
   }
 });
 // Upload profile photo to ImgBB
-app.post("/api/upload/profile-photo", auth, async (req: AuthRequest, res: Response) => {
-  try {
+app.post("/api/upload/profile-photo", async (req: Request, res: Response) => {
+    try {
     const apiKey = process.env.IMGBB_API_KEY;
 
     if (!apiKey) {
