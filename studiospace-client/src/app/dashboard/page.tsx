@@ -164,17 +164,6 @@ export default function Dashboard() {
         </Link>
       ))}
 
-      <Link
-        href="/my-bookings"
-        className="creator-action-card"
-      >
-        <span className="creator-action-icon">★</span>
-        <h3>Reviews & Feedback</h3>
-        <p>
-          Access completed bookings and review opportunities.
-        </p>
-        <span className="creator-action-link">View →</span>
-      </Link>
     </div>
 
     <div className="creator-recent-section">
@@ -199,7 +188,7 @@ export default function Dashboard() {
             </Link>
           </div>
         ) : (
-          
+
           recentBookings.map((booking) => (
             <div
               className="creator-booking-row"
