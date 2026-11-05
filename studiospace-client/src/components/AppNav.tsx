@@ -198,24 +198,34 @@ export default function AppNav() {
                 Get Started
               </Link>
             </>
+          
           ) : user.role === "admin" ? (
-            <>
-              <Link href="/admin" className={routeActive("/admin") && pathname === "/admin" ? "nav-active" : ""} onClick={closeMenu}>Dashboard</Link>
-              <Link href="/admin/users" className={routeActive("/admin/users") ? "nav-active" : ""} onClick={closeMenu}>Users</Link>
-              <Link href="/admin/studios" className={routeActive("/admin/studios") ? "nav-active" : ""} onClick={closeMenu}>Studios</Link>
-              <Link href="/admin/bookings" className={routeActive("/admin/bookings") ? "nav-active" : ""} onClick={closeMenu}>Bookings</Link>
-              <Link href="/admin/reviews" className={routeActive("/admin/reviews") ? "nav-active" : ""} onClick={closeMenu}>Reviews</Link>
-              <Link href="/admin/revenue" className={routeActive("/admin/revenue") ? "nav-active" : ""} onClick={closeMenu}>Revenue</Link>
-              <Link href="/admin/contacts" className={routeActive("/admin/contacts") ? "nav-active" : ""} onClick={closeMenu}>Contacts</Link>
+  <>
+    <Link
+      href="/admin"
+      className={pathname === "/admin" ? "nav-active" : ""}
+      onClick={closeMenu}
+    >
+      Dashboard
+    </Link>
 
-              <Link href="/profile" className={`profile-nav ${routeActive("/profile") ? "nav-active" : ""}`} onClick={closeMenu}>
-                {user.photoURL ? <img src={user.photoURL} alt="" /> : <span className="avatar-fallback">{user.name?.[0] || "A"}</span>}
-                Profile
-              </Link>
+    <Link
+      href="/profile"
+      className={`profile-nav ${routeActive("/profile") ? "nav-active" : ""}`}
+      onClick={closeMenu}
+    >
+      {user.photoURL ? (
+        <img src={user.photoURL} alt="" />
+      ) : (
+        <span className="avatar-fallback">{user.name?.[0] || "A"}</span>
+      )}
+      Profile
+    </Link>
 
-              <button className="nav-action" onClick={handleLogout}>Logout</button>
-            </>
-          ) : user.role === "host" ? (
+    <button className="nav-action" onClick={handleLogout}>
+      Logout
+    </button>
+  </> ): user.role === "host" ? (
             <>
               <Link href="/studios" className={routeActive("/studios") ? "nav-active" : ""} onClick={closeMenu}>Explore Studios</Link>
               <Link href="/dashboard" className={routeActive("/dashboard") ? "nav-active" : ""} onClick={closeMenu}>Dashboard</Link>
