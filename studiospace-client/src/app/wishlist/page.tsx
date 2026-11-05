@@ -110,7 +110,6 @@ export default function WishlistPage() {
                     {" "}/ hour
                   </span>
                 </p>
-
                 <div className="mt-5 flex flex-wrap gap-3">
                   <Link
                     href={`/studios/${item.studioId}`}
