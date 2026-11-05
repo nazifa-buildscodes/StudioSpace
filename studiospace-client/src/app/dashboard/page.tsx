@@ -103,6 +103,17 @@ export default function Dashboard() {
             <p>Manage your studio listings.</p>
           </Link>
         )}
+
+        {u?.role === "host" && (
+  <Link className="action-card" href="/revenue">
+    <span>৳</span>
+    <h3>Revenue & Earnings</h3>
+    <p>
+      Track your studio earnings, completed bookings
+      and revenue details.
+    </p>
+  </Link>
+)}
         
 {u?.role === "host" && (
   <Link className="action-card" href="/host/reviews">

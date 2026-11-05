@@ -225,26 +225,35 @@ export default function AppNav() {
     <button className="nav-action" onClick={handleLogout}>
       Logout
     </button>
-  </> ): user.role === "host" ? (
-            <>
-              <Link href="/studios" className={routeActive("/studios") ? "nav-active" : ""} onClick={closeMenu}>Explore Studios</Link>
-              <Link href="/dashboard" className={routeActive("/dashboard") ? "nav-active" : ""} onClick={closeMenu}>Dashboard</Link>
-              <Link href="/add-studio" className={routeActive("/add-studio") ? "nav-active" : ""} onClick={closeMenu}>Add Studio</Link>
-              <Link href="/my-listings" className={routeActive("/my-listings") ? "nav-active" : ""} onClick={closeMenu}>My Listings</Link>
-              <Link
-  href="/revenue"
-  className={routeActive("/revenue") ? "nav-active" : ""}
-  onClick={closeMenu}
->
-  Revenue
-</Link>
-              <Link href="/profile" className={`profile-nav ${routeActive("/profile") ? "nav-active" : ""}`} onClick={closeMenu}>
-                {user.photoURL ? <img src={user.photoURL} alt="" /> : <span className="avatar-fallback">{user.name?.[0] || "H"}</span>}
-                Profile
-              </Link>
+ </> ) : user.role === "host" ? (
+  <>
+    <Link
+      href="/dashboard"
+      className={routeActive("/dashboard") ? "nav-active" : ""}
+      onClick={closeMenu}
+    >
+      Dashboard
+    </Link>
 
-              <button className="nav-action" onClick={handleLogout}>Logout</button>
-            </>
+    <Link
+      href="/profile"
+      className={`profile-nav ${routeActive("/profile") ? "nav-active" : ""}`}
+      onClick={closeMenu}
+    >
+      {user.photoURL ? (
+        <img src={user.photoURL} alt="" />
+      ) : (
+        <span className="avatar-fallback">
+          {user.name?.[0] || "H"}
+        </span>
+      )}
+      Profile
+    </Link>
+
+    <button className="nav-action" onClick={handleLogout}>
+      Logout
+    </button>
+  </>
           ) : (
             <>
               <Link href="/studios" className={routeActive("/studios") ? "nav-active" : ""} onClick={closeMenu}>Explore Studios</Link>
