@@ -37,7 +37,6 @@ export default function Dashboard() {
       });
     });
   }, [router]);
-
   return (
     <PageFrame
       title={`Welcome, ${u?.name || "Creator"}`}
