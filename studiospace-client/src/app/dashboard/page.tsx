@@ -55,7 +55,6 @@ export default function Dashboard() {
           <b>{stats?.pending ?? "—"}</b>
         </div>
       </div>
-
       <div className="action-grid">
         <Link className="action-card" href="/studios">
           <span>⌕</span>
