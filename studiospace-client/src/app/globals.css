@@ -715,3 +715,260 @@ select {
     text-align: right;
   }
 }
+
+/* CREATOR DASHBOARD */
+
+.creator-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.creator-welcome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(163,230,53,.12), rgba(20,184,166,.06));
+}
+
+.creator-eyebrow {
+  color: #a3e635;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.creator-welcome h2 {
+  font-size: 28px;
+  margin: 12px 0 8px;
+}
+
+.creator-welcome p,
+.creator-section-heading p {
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.creator-stats {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.creator-stat-card {
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--card, var(--surface));
+}
+
+.creator-stat-card span {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.creator-stat-card strong {
+  font-size: 30px;
+}
+
+.creator-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.creator-section-heading h2 {
+  margin: 0 0 7px;
+  font-size: 22px;
+}
+
+.creator-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.creator-action-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 22px;
+  min-height: 185px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--card, var(--surface));
+  text-decoration: none;
+  color: inherit;
+  transition: .2s ease;
+}
+
+.creator-action-card:hover {
+  transform: translateY(-4px);
+  border-color: #a3e635;
+}
+
+.creator-action-icon {
+  font-size: 26px;
+  color: #a3e635;
+}
+
+.creator-action-card h3 {
+  margin: 4px 0 0;
+  font-size: 17px;
+}
+
+.creator-action-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.creator-action-link,
+.creator-view-all {
+  margin-top: auto;
+  color: #a3e635;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.creator-recent-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.creator-booking-list {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--card, var(--surface));
+}
+
+.creator-booking-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.creator-booking-row:last-child {
+  border-bottom: 0;
+}
+
+.creator-booking-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(163,230,53,.12);
+  color: #a3e635;
+  font-size: 22px;
+}
+
+.creator-booking-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.creator-booking-info h3 {
+  font-size: 15px;
+  margin: 0 0 5px;
+}
+
+.creator-booking-info p,
+.creator-booking-info small {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.creator-status {
+  padding: 6px 11px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.creator-status.success {
+  color: #22c55e;
+  background: rgba(34,197,94,.12);
+}
+
+.creator-status.info {
+  color: #38bdf8;
+  background: rgba(56,189,248,.12);
+}
+
+.creator-status.warning {
+  color: #f59e0b;
+  background: rgba(245,158,11,.12);
+}
+
+.creator-status.muted {
+  color: var(--muted);
+  background: rgba(128,128,128,.12);
+}
+
+.creator-empty {
+  text-align: center;
+  padding: 35px 20px;
+}
+
+.creator-empty p {
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+@media (max-width: 1050px) {
+  .creator-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .creator-actions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .creator-welcome {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+  }
+
+  .creator-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .creator-stat-card {
+    padding: 15px;
+  }
+
+  .creator-stat-card strong {
+    font-size: 25px;
+  }
+
+  .creator-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .creator-booking-row {
+    flex-wrap: wrap;
+  }
+}
