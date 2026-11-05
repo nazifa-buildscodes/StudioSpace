@@ -259,6 +259,13 @@ export default function AppNav() {
               <Link href="/dashboard" className={routeActive("/dashboard") ? "nav-active" : ""} onClick={closeMenu}>Dashboard</Link>
               <Link href="/my-bookings" className={routeActive("/my-bookings") ? "nav-active" : ""} onClick={closeMenu}>My Bookings</Link>
               <Link
+  href="/messages"
+  className={routeActive("/messages") ? "nav-active" : ""}
+  onClick={closeMenu}
+>
+  Messages
+</Link>
+              <Link
   href="/wishlist"
   className={routeActive("/wishlist") ? "nav-active" : ""}
   onClick={closeMenu}
