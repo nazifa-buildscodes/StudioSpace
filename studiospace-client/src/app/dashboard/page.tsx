@@ -25,7 +25,6 @@ export default function Dashboard() {
       router.replace("/admin");
       return;
     }
-
     Promise.all([
       request("/api/my/studios").catch(() => ({ data: [] })),
       request("/api/bookings").catch(() => ({ data: [] })),
