@@ -11,7 +11,6 @@ export default function Dashboard() {
   const [u, setU] = useState<any>(null);
   const [stats, setStats] = useState<any>(null);
   const router = useRouter();
-
   useEffect(() => {
     const user = currentUser();
     setU(user);
@@ -20,7 +19,6 @@ export default function Dashboard() {
       router.replace("/login");
       return;
     }
-
     if (user.role === "admin") {
       router.replace("/admin");
       return;
