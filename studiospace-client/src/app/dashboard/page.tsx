@@ -110,7 +110,6 @@ export default function Dashboard() {
     </p>
   </Link>
 )}
-        
 {u?.role === "host" && (
   <Link className="action-card" href="/host/reviews">
     <span>★</span>
@@ -118,7 +117,6 @@ export default function Dashboard() {
     <p>View ratings and feedback from creators.</p>
   </Link>
 )}
-
       </div>
 
       <button className="btn-outline" onClick={logout}>
