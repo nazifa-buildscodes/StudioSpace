@@ -496,7 +496,11 @@ onClick={() => {
 
                           <Link
                             href="/register"
-                            className="rounded-full border border-white/40 bg-white/10 px-7 py-4 text-sm font-bold text-white backdrop-blur-md transition hover:bg-white hover:text-black"
+className={`rounded-full border px-7 py-4 text-sm font-bold backdrop-blur-md transition hover:-translate-y-1 ${
+  theme === "light"
+    ? "border-white bg-white text-[#14200c] shadow-lg hover:bg-[#c8fa82] hover:text-[#14200c]"
+    : "border-white/40 bg-white/10 text-white hover:bg-white hover:text-black"
+}`}
                           >
                             Host Your Space
                           </Link>
