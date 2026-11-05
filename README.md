@@ -1,18 +1,22 @@
 # StudioSpace — Creative Studio Discovery & Booking Platform
 
 <p align="center">
-  **Discover Spaces. Book with Confidence. Create Without Limits.**
+
+**Discover Spaces. Book with Confidence. Create Without Limits.**
+
 </p>
 
 <p align="center">
-  [🌐 Live Website](https://studio-space-gamma.vercel.app/) ·
-  [💻 GitHub Repository](https://github.com/nazifa-buildscodes/StudioSpace) ·
-  [⚙️ Backend API](https://studiospace-api-one.vercel.app/)
+
+[🌐 Live Website](https://studio-space-gamma.vercel.app/) ·
+[💻 GitHub Repository](https://github.com/nazifa-buildscodes/StudioSpace) ·
+[⚙️ Backend API](https://studiospace-api-one.vercel.app/)
+
 </p>
 
 ---
 
-## About StudioSpace
+## 📖 About StudioSpace
 
 **StudioSpace** is a full-stack creative studio discovery and booking platform that connects creators looking for professional creative spaces with hosts who want to list and rent out their studios.
 
@@ -20,7 +24,7 @@ From photography studios and podcast rooms to music studios and film production 
 
 StudioSpace provides separate experiences for Creators, Hosts, and Admins, making studio discovery, booking management, and communication more organized and convenient.
 
-### Why Use StudioSpace?
+### 🎯 Why Use StudioSpace?
 
 - Discover different creative studios in one place.
 - Explore studio images, descriptions, locations, categories, and hourly prices.
@@ -30,10 +34,12 @@ StudioSpace provides separate experiences for Creators, Hosts, and Admins, makin
 - Share feedback after completed bookings.
 - Manage studio listings and booking requests through dedicated dashboards.
 
+---
 
 ## 👥 User Roles
 
 ### 1. Creator
+
 - Browse and explore creative studios.
 - View individual studio details and pricing.
 - Explore studios by category.
@@ -47,6 +53,7 @@ StudioSpace provides separate experiences for Creators, Hosts, and Admins, makin
 - Access a dedicated Creator dashboard.
 
 ### 2. Host
+
 - Add, edit, and delete studio listings.
 - Manage studio information, images, and pricing.
 - View incoming booking requests.
@@ -58,6 +65,7 @@ StudioSpace provides separate experiences for Creators, Hosts, and Admins, makin
 - Access a dedicated Host dashboard.
 
 ### 3. Admin
+
 - Access a separate Admin dashboard.
 - Manage studio listings through the Admin management area.
 - Access the Admin inbox.
@@ -66,19 +74,49 @@ StudioSpace provides separate experiences for Creators, Hosts, and Admins, makin
 
 Each role has its own navigation, dashboard, and access permissions.
 
+---
+
 ## ✨ Main Features
 
 - **Authentication:** Registration, login, Google authentication integration, and role-based access.
 - **Studio Discovery:** Featured studios, category-based exploration, and individual studio details.
 - **Booking Management:** Booking requests, confirmation, rejection, cancellation, completion, and status tracking.
-- **Wishlist:** Creator-specific wishlist with add, view, and remove functionality.
-- **Messaging:** Two-way communication between Creators and Hosts, as well as Creators and Admins.
 - **Reviews & Feedback:** Review submission after completed bookings and Host review viewing.
-- **Invoice & Revenue:** Booking invoice information, PDF invoice generation, and Host revenue overview.
 - **Role-Based Dashboards:** Separate Admin, Host, and Creator dashboards with relevant statistics and actions.
 - **Responsive Design:** Layout optimized for desktop and mobile devices.
-- **Theme Management:** Light Mode, Dark Mode, and System Theme.
-- **Better User Experience:** Homepage hero slider, active navigation indication, toast notifications, loading skeletons, empty states, and custom 404 page.
+
+---
+
+## 🌟 Extra Features & Additional Enhancements
+
+Beyond the core project requirements, I added several additional features and improvements to make StudioSpace more functional, interactive, and user-friendly.
+
+### 💬 Communication & Engagement
+
+- **Two-Way Messaging System:** Direct communication between Creators and Hosts, as well as Creators and Admins.
+- **Dedicated Inbox:** Separate messaging experiences for different user roles.
+- **Creator Wishlist:** Save, view, and remove favorite studios.
+
+### 💰 Booking & Business Management
+
+- **PDF Invoice Generation:** Generate and download booking invoices.
+- **Host Revenue Overview:** View revenue summaries through the Host dashboard.
+- **Additional Booking Controls:** Booking cancellation, completion, and status management flows.
+
+### 🎨 UI/UX & User Experience
+
+- **Light, Dark & System Themes:** Multiple theme preferences for a comfortable browsing experience.
+- **Skeleton Loading UI:** Display loading placeholders while studio data is being fetched.
+- **Custom 404 Page:** A dedicated and user-friendly Not Found page.
+- **Enhanced Empty States:** Helpful visual feedback when no data is available.
+- **Toast Notifications:** Instant success and error feedback for user actions.
+- **Confirmation Modals:** Additional confirmation before important actions.
+- **Homepage Hero Slider:** An interactive hero section to improve the homepage experience.
+- **Active Navigation Indicators:** Clear visual indication of the currently active section.
+
+These enhancements helped me go beyond the basic requirements and focus on building a more polished and practical platform.
+
+---
 
 ## 🛠️ Technology Stack
 
@@ -93,9 +131,12 @@ Each role has its own navigation, dashboard, and access permissions.
 | API Communication | REST API |
 | Deployment | Vercel |
 
+---
+
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js
 - npm
 - Git
@@ -144,6 +185,8 @@ Open **http://localhost:3000** in your browser.
 
 > The frontend normally runs on port `3000`, and the backend normally runs on port `5000`. Check the current `package.json` and `.env.example` files for exact scripts and environment variable names. Never commit real credentials or secrets to GitHub.
 
+---
+
 ## 🔑 Demo Access
 
 A separate demo account can be provided for reviewers to explore the Admin dashboard.
@@ -154,6 +197,8 @@ A separate demo account can be provided for reviewers to explore the Admin dashb
 | Admin Password | `Admin12` |
 
 > Use a dedicated demo account instead of the owner's real Admin credentials. Prefer restricted permissions and sample data. Disable or rotate the demo credentials when no longer needed.
+
+---
 
 ## 💡 My Learning Journey
 
@@ -171,6 +216,8 @@ Every bug I fixed taught me something new. Every error helped me understand the 
 
 I know I still have a lot to learn, but I gave this project my best effort with the knowledge and resources available to me. I am proud of the progress I have made, and I plan to keep learning, researching, and improving this project.
 
+---
+
 ## 🔮 Future Improvements
 
 - Advanced studio search, filtering, and sorting.
@@ -184,6 +231,8 @@ I know I still have a lot to learn, but I gave this project my best effort with 
 
 StudioSpace is a work in progress, and I look forward to making it better with every iteration.
 
+---
+
 ## 👩‍💻 Author
 
 **Nazifa Nowsin**
@@ -195,9 +244,13 @@ StudioSpace is a work in progress, and I look forward to making it better with e
 ---
 
 <p align="center">
-  **Made with learning, research, persistence, and creativity. 💚**
+
+**Made with learning, research, persistence, and creativity. 💚**
+
 </p>
 
 <p align="center">
-  Thank you for visiting StudioSpace!
+
+Thank you for visiting StudioSpace!
+
 </p>
