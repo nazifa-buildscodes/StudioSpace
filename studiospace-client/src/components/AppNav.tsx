@@ -253,33 +253,46 @@ export default function AppNav() {
       Logout
     </button>
   </>
-          ) : (
-            <>
-              <Link href="/studios" className={routeActive("/studios") ? "nav-active" : ""} onClick={closeMenu}>Explore Studios</Link>
-              <Link href="/dashboard" className={routeActive("/dashboard") ? "nav-active" : ""} onClick={closeMenu}>Dashboard</Link>
-              <Link href="/my-bookings" className={routeActive("/my-bookings") ? "nav-active" : ""} onClick={closeMenu}>My Bookings</Link>
-              <Link
-  href="/messages"
-  className={routeActive("/messages") ? "nav-active" : ""}
-  onClick={closeMenu}
->
-  Messages
-</Link>
-              <Link
-  href="/wishlist"
-  className={routeActive("/wishlist") ? "nav-active" : ""}
-  onClick={closeMenu}
->
-  Wishlist
-</Link>
-              <Link href="/profile" className={`profile-nav ${routeActive("/profile") ? "nav-active" : ""}`} onClick={closeMenu}>
-                {user.photoURL ? <img src={user.photoURL} alt="" /> : <span className="avatar-fallback">{user.name?.[0] || "C"}</span>}
-                Profile
-              </Link>
+         ) : (
+  <>
+    <Link
+      href="/studios"
+      className={routeActive("/studios") ? "nav-active" : ""}
+      onClick={closeMenu}
+    >
+      Explore Studios
+    </Link>
 
-              <button className="nav-action" onClick={handleLogout}>Logout</button>
-            </>
-          )}
+    <Link
+      href="/dashboard"
+      className={routeActive("/dashboard") ? "nav-active" : ""}
+      onClick={closeMenu}
+    >
+      Dashboard
+    </Link>
+
+    <Link
+      href="/profile"
+      className={`profile-nav ${
+        routeActive("/profile") ? "nav-active" : ""
+      }`}
+      onClick={closeMenu}
+    >
+      {user.photoURL ? (
+        <img src={user.photoURL} alt="" />
+      ) : (
+        <span className="avatar-fallback">
+          {user.name?.[0] || "C"}
+        </span>
+      )}
+      Profile
+    </Link>
+
+    <button className="nav-action" onClick={handleLogout}>
+      Logout
+    </button>
+  </>
+)}
 
          <select
   aria-label="Choose appearance"
