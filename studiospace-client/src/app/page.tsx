@@ -802,89 +802,99 @@ className={`rounded-full border px-7 py-4 text-sm font-bold backdrop-blur-md tra
     </div>
   </div>
 </section>
-      {/* FOOTER */}
 
-      <footer className="border-t border-[var(--border)] bg-[var(--surface)]">
-        <div className="container-custom grid gap-12 py-14 sm:grid-cols-2 lg:grid-cols-4">
-          <div>
-            <Link href="/" className="inline-flex items-center gap-2.5">
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--primary)] text-xl font-bold text-white">
-                S
-              </span>
-              <span className="text-xl font-extrabold">
-                Studio<span className="text-[var(--primary)]">Space</span>
-              </span>
-            </Link>
-            <p className="text-muted mt-5 max-w-xs text-sm leading-7">
-              A creative community connecting talented people with inspiring
-              studio spaces.
-            </p>
-            <div className="mt-5 flex gap-3">
-              {["Instagram", "Facebook", "X"].map((social) => (
-                <span
-                  key={social}
-                  className="surface rounded-full px-3 py-2 text-xs font-semibold"
-                >
-                  {social}
-                </span>
-              ))}
-            </div>
-          </div>
+{/* FOOTER */}
+<footer className="border-t border-[var(--border)] bg-[var(--surface)]">
+  <div className="container-custom grid grid-cols-2 gap-x-6 gap-y-7 py-8 sm:gap-10 sm:py-12 lg:grid-cols-4">
 
-          <div>
-            <h3 className="mb-5 font-bold">Explore</h3>
-            <div className="flex flex-col gap-3 text-sm text-muted">
-              <Link href="/studios" className="hover:text-[var(--primary)]">
-                All Studios
-              </Link>
-              <Link href="/studios?category=Photography" className="hover:text-[var(--primary)]">
-                Photo Studios
-              </Link>
-              <Link href="/studios?category=Podcast%20Studio" className="hover:text-[var(--primary)]">
-                Podcast Rooms
-              </Link>
-              <Link href="/studios?category=Music%20Studio" className="hover:text-[var(--primary)]">
-                Music Suites
-              </Link>
-            </div>
-          </div>
+    {/* BRAND */}
+    <div className="col-span-2 lg:col-span-1">
+      <Link href="/" className="inline-flex items-center gap-2.5">
+        <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[var(--primary)] text-lg font-bold text-white">
+          S
+        </span>
+        <span className="text-lg font-extrabold">
+          Studio<span className="text-[var(--primary)]">Space</span>
+        </span>
+      </Link>
 
-          <div>
-            <h3 className="mb-5 font-bold">For Hosts</h3>
-            <div className="flex flex-col gap-3 text-sm text-muted">
-              <Link href="/add-studio" className="hover:text-[var(--primary)]">
-                List Your Studio
-              </Link>
-              <Link href="/register" className="hover:text-[var(--primary)]">
-                Create Account
-              </Link>
-              <Link href="/login" className="hover:text-[var(--primary)]">
-                Host Login
-              </Link>
-            </div>
-          </div>
+      <p className="text-muted mt-3 max-w-xs text-xs leading-6 sm:text-sm">
+        A creative community connecting talented people with inspiring
+        studio spaces.
+      </p>
 
-          <div>
-            <h3 className="mb-5 font-bold">Get in Touch</h3>
-            <p className="text-muted text-sm leading-7">
-              Have a question or need help? We would love to hear from you.
-            </p>
-            <Link
-              href="/contact"
-              className="mt-4 inline-block text-sm font-bold text-[var(--primary)] hover:underline"
-            >
-              Contact Us ↗
-            </Link>
-          </div>
-        </div>
+      <div className="mt-3 flex gap-2">
+        {["Instagram", "Facebook", "X"].map((social) => (
+          <span
+            key={social}
+            className="surface rounded-full px-3 py-1.5 text-[11px] font-semibold"
+          >
+            {social}
+          </span>
+        ))}
+      </div>
+    </div>
 
-        <div className="border-t border-[var(--border)]">
-          <div className="container-custom flex flex-col justify-between gap-3 py-6 text-xs text-muted sm:flex-row">
-            <p>© 2026 StudioSpace. All rights reserved.</p>
-            <p>Made for creators, with creativity. ✦</p>
-          </div>
-        </div>
-      </footer>
+    {/* EXPLORE */}
+    <div>
+      <h3 className="mb-3 text-sm font-bold">Explore</h3>
+      <div className="flex flex-col gap-2 text-xs text-muted sm:text-sm">
+        <Link href="/studios" className="hover:text-[var(--primary)]">
+          All Studios
+        </Link>
+        <Link href="/studios?category=Photography" className="hover:text-[var(--primary)]">
+          Photo Studios
+        </Link>
+        <Link href="/studios?category=Podcast%20Studio" className="hover:text-[var(--primary)]">
+          Podcast Rooms
+        </Link>
+        <Link href="/studios?category=Music%20Studio" className="hover:text-[var(--primary)]">
+          Music Suites
+        </Link>
+      </div>
+    </div>
+
+    {/* HOSTS */}
+    <div>
+      <h3 className="mb-3 text-sm font-bold">For Hosts</h3>
+      <div className="flex flex-col gap-2 text-xs text-muted sm:text-sm">
+        <Link href="/add-studio" className="hover:text-[var(--primary)]">
+          List Your Studio
+        </Link>
+        <Link href="/register" className="hover:text-[var(--primary)]">
+          Create Account
+        </Link>
+        <Link href="/login" className="hover:text-[var(--primary)]">
+          Host Login
+        </Link>
+      </div>
+    </div>
+
+    {/* CONTACT */}
+    <div className="col-span-2 lg:col-span-1">
+      <h3 className="mb-2 text-sm font-bold">Get in Touch</h3>
+      <p className="text-muted max-w-xs text-xs leading-6 sm:text-sm">
+        Have a question or need help? We would love to hear from you.
+      </p>
+      <Link
+        href="/contact"
+        className="mt-2 inline-block text-xs font-bold text-[var(--primary)] hover:underline sm:text-sm"
+      >
+        Contact Us ↗
+      </Link>
+    </div>
+
+  </div>
+
+  {/* COPYRIGHT */}
+  <div className="border-t border-[var(--border)]">
+    <div className="container-custom flex flex-col items-center justify-between gap-2 py-4 text-center text-[11px] text-muted sm:flex-row sm:text-left sm:text-xs">
+      <p>© 2026 StudioSpace. All rights reserved.</p>
+      <p>Made for creators, with creativity. ✦</p>
+    </div>
+  </div>
+</footer>
+
     </>
   );
 }
